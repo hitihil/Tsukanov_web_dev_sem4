@@ -1,0 +1,95 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+header {
+    background-color: #2c3e50; /* тёмно-синий, отличается от основного фона */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #34495e; /* чуть светлее для контраста внутри шапки */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-info {
+    font-size: 16px;
+}
+
+/* Основной блок */
+main {
+    background-color: #f0f0f0; /* светло-серый */
+    color: black;
+    padding: 20px;
+    flex: 1; /* занимает всё доступное пространство, прижимая подвал */
+}
+
+/* Стиль для результата */
+.result {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили формы */
+form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 250px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1a252f;
+}
+
+/* Подвал */
+footer {
+    background-color: #34495e; /* другой тёмный оттенок, отличается от шапки и основного фона */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 14px;
+}

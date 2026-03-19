@@ -1,0 +1,113 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+header {
+    background-color: #2c3e50; /* тёмно-синий, отличается от основного фона */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #34495e; /* чуть светлее для контраста внутри шапки */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-info {
+    font-size: 16px;
+}
+
+/* Основной блок */
+main {
+    background-color: #f0f0f0; /* светло-серый */
+    color: black;
+    padding: 20px;
+    flex: 1; /* занимает всё доступное пространство, прижимая подвал */
+}
+
+/* Подвал */
+footer {
+    background-color: #34495e; /* другой тёмный оттенок, отличается от шапки и основного фона */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Стили для исходного текста */
+.src_text {
+    color: #b3002d;      /* тёмно‑красный, хорошо выделяется */
+    font-style: italic;
+    background-color: #fff3f3;
+    padding: 15px;
+    border: 2px solid #b3002d;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+/* Сообщение об ошибке */
+.src_error {
+    color: #cc0000;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ffeeee;
+    border: 1px solid #cc0000;
+    border-radius: 4px;
+}
+
+/* Таблицы */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 25px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #d9e1e8;
+    font-weight: 600;
+}
+
+/* Кнопка «Другой анализ» (оформленная как ссылка) */
+.another-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.another-link:hover {
+    background-color: #1a252f;
+}

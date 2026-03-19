@@ -1,0 +1,214 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-info {
+    font-size: 16px;
+}
+
+/* Основной блок */
+main {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Подвал */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Меню */
+#menu {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+#menu a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+#menu a.selected {
+    background-color: red;
+}
+
+/* Подменю */
+#submenu {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+#submenu a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: lightblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+#submenu a.selected {
+    background-color: red;
+}
+
+/* Таблица */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+table th {
+    background-color: #eee;
+}
+
+/* Пагинация */
+#pages {
+    margin-top: 20px;
+}
+#pages a, #pages span {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
+}
+#pages a:hover {
+    border: 2px solid black;
+    margin: -1px; /* компенсация, чтобы не сдвигать соседей */
+}
+#pages span {
+    background-color: #ddd;
+    font-weight: bold;
+}
+
+/* Сообщения об успехе/ошибке */
+.ok {
+    color: green;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.error {
+    color: red;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Списки ссылок для редактирования и удаления */
+#edit_links, #delete_links {
+    margin-bottom: 20px;
+}
+#edit_links a, #delete_links a {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #e0e0e0;
+    text-decoration: none;
+    color: black;
+    border-radius: 3px;
+}
+#edit_links a:hover, #delete_links a:hover {
+    background-color: #ccc;
+}
+#edit_links .current {
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background-color: #ffcccc;
+    border: 1px solid red;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/* Формы */
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form textarea {
+    width: 300px;
+    padding: 5px;
+    margin-left: 10px;
+}
+form input[type="radio"] {
+    margin-left: 10px;
+}
+form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: darkblue;
+}
+/* Добавлено правило для наведения на ссылки пагинации */
+#pages a:hover {
+    border: 2px solid black;
+    margin: -1px;
+}
+/* Выравнивание меток форм */
+form label {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+form label input[type="text"],
+form label input[type="email"],
+form label input[type="date"],
+form label textarea {
+    margin-left: 10px;
+    flex: 1;
+}
+form label input[type="radio"] {
+    margin-left: 10px;
+    width: auto;
+}

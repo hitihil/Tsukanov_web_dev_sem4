@@ -1,0 +1,172 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Шапка */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #34495e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.student-info {
+    font-size: 16px;
+}
+
+/* Основной блок */
+main {
+    background-color: #f0f0f0;
+    color: black;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Подвал */
+footer {
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Стили для формы (выравнивание по левому краю, подписи слева, поля одинаковой ширины) */
+.test-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    width: 200px;          /* фиксированная ширина для всех подписей */
+    text-align: left;
+    font-weight: bold;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row select,
+.form-row textarea {
+    width: 300px;           /* одинаковая ширина для всех полей ввода */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-row textarea {
+    resize: vertical;
+}
+
+.form-row input[type="checkbox"] {
+    width: auto;
+    margin-left: 0;
+}
+
+.form-row button {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-row button:hover {
+    background-color: #1a252f;
+}
+
+/* Стили для отчёта */
+.report {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    line-height: 1.6;
+}
+
+/* Кнопка "Повторить тест" оформленная как ссылка с рамкой */
+#back_button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid #1a252f;
+    font-weight: bold;
+}
+
+#back_button:hover {
+    background-color: #1a252f;
+}
+
+/* ========== УПРОЩЁННАЯ ВЕРСИЯ ДЛЯ ПЕЧАТИ ========== */
+body.print-version {
+    background: white;
+    color: black;
+}
+
+/* Убираем цветные фоны в шапке и подвале, делаем их нейтральными */
+body.print-version header,
+body.print-version footer {
+    background: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+body.print-version .logo {
+    background: none;
+    color: black;
+    border: 1px solid #aaa;
+}
+
+/* Отчёт — белый фон, чёрный текст, без теней и скруглений */
+body.print-version .report {
+    background: white;
+    color: black;
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+}
+
+/* Прячем кнопку "Повторить тест" */
+body.print-version #back_button {
+    display: none;
+}
+
+/* По желанию: убираем фоны у полей формы, если форма вдруг отображается */
+body.print-version input,
+body.print-version select,
+body.print-version textarea {
+    background: white;
+    color: black;
+    border: 1px solid black;
+}
